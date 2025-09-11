@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Mentions</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+    }
+
+    .mentions-container {
+      max-width: 1000px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 20px 30px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .mentions-container h2 {
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+
+    /* Flex Layout : Image left, Text right */
+    .mentions-main {
+      display: flex;
+      gap: 20px;
+    }
+
+    .mention-image {
+      width: 320px;
+      flex-shrink: 0;
+    }
+
+    .mention-image img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    }
+
+    /* Scrollable text list */
+    .mentions-list {
+      flex: 1;
+      max-height: 350px;
+      overflow-y: auto;
+      padding-right: 10px;
+      border-left: 1px solid #ddd;
+      padding-left: 15px;
+    }
+
+    .mention-text {
+      margin-bottom: 25px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+    }
+
+    .mention-text h3 {
+      font-size: 18px;
+      margin: 0 0 5px;
+      color: #222;
+    }
+
+    .mention-text p {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.5;
+      margin: 4px 0;
+    }
+
+    .mention-text a {
+      display: inline-block;
+      margin-top: 6px;
+      text-decoration: none;
+      color: #ff6600;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .mention-text a:hover {
+      color: #cc5200;
+    }
+
+    /* Scrollbar */
+    .mentions-list::-webkit-scrollbar {
+      width: 8px;
+    }
+    .mentions-list::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 4px;
+    }
+    .mentions-list::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 4px;
+    }
+    .mentions-list::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .mentions-main {
+        flex-direction: column;
+      }
+      .mention-image {
+        width: 100%;
+        text-align: center;
+      }
+      .mention-image img {
+        max-width: 300px;
+      }
+      .mentions-list {
+        border-left: none;
+        border-top: 1px solid #ddd;
+        padding-left: 0;
+        margin-top: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="mentions-container">
+    <h2>ONLINE MENTIONS</h2>
+
+    <div class="mentions-main">
+      <!-- FIXED IMAGE LEFT SIDE -->
+      <div class="mention-image">
+        <img src="https://pn-paul.netlify.app/image/et-prime.jpg" alt="Main Image">
+      </div>
+
+      <!-- SCROLLING TEXT RIGHT SIDE -->
+      <div class="mentions-list">
+
+        <div class="mention-text">
+          <h3>AIN</h3>
+          <p><strong>Date:</strong> Jul 16, 2018</p>
+          <p>"First Fiddle Restaurants aims top-line growth by 2020, 
+             to opt for franchising route to expansion"</p>
+          <a href="#">READ FULL ARTICLE</a>
+        </div>
+
+        <div class="mention-text">
+          <h3>BUSINESS LINE</h3>
+          <p><strong>Date:</strong> May 20, 2019</p>
+          <p>Coverage of leading restaurant chains in India</p>
+          <a href="#">READ FULL ARTICLE</a>
+        </div>
+
+        <div class="mention-text">
+          <h3>TIME MAGAZINE</h3>
+          <p><strong>Date:</strong> Aug 12, 2020</p>
+          <p>"Highlighting top restaurant entrepreneurs in India."</p>
+          <a href="#">READ FULL ARTICLE</a>
+        </div>
+
+        <div class="mention-text">
+          <h3>ECONOMIC TIMES</h3>
+          <p><strong>Date:</strong> Sep 10, 2022</p>
+          <p>Insights on restaurant industry growth post-pandemic</p>
+          <a href="#">READ FULL ARTICLE</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
